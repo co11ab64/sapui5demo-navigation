@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/demo/basicTemplate/model/formatter"],function(e,o){"use strict";return e.extend("sap.ui.demo.basicTemplate.controller.App",{formatter:o,onInit:function(){console.log("App controller init")},getRouter:function(){return sap.ui.core.UIComponent.getRouterFor(this)}})});
