@@ -4,13 +4,7 @@ sap.ui.define([
 ], function(Controller, formatter) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.basicTemplate.controller.App", {
-
-		formatter: formatter,
-
-		onInit: function () {
-			console.log("App controller init");
-		},
+	return Controller.extend("sap.ui.demo.basicTemplate.controller.BaseController", {
 
 		//Helper method to get the router instance
 		getRouter:function(){

@@ -1,11 +1,24 @@
-<mvc:View
-	controllerName="sap.ui.demo.basicTemplate.controller.Home"
-	displayBlock="true"
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Home" displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		id="page"
-		title="{i18n>title}">
-		<content></content>
+	<Page id="page" title="{i18n>title}">
+		<content>
+			<List items="{mockdata>/d/results}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="{
+						parts:[
+							'i18n>custList.title', '= ${mockdata>/d/results}.length'
+						],
+						formatter: 'jQuery.sap.formatMessage'
+						}"/>
+					</Toolbar>
+				</headerToolbar>
+
+				<items>
+					<StandardListItem title="{mockdata>ContactName}" type="Navigation" press="onCustomerNamePress"/>
+				</items>
+			</List>
+		</content>
 	</Page>
 </mvc:View>

@@ -1,0 +1,24 @@
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.CustomerDetails" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page id="customerDetails">
+		<customHeader>
+			<Toolbar>
+				<Button text="Back" press="onBackPress"/>
+				<ToolbarSpacer />
+				<Title text="{
+					parts:[
+						'i18n>custDet.pageTitle',
+						'mockdata>ContactName'
+					],
+					formatter:'jQuery.sap.formatMessage'
+					}"/>
+				<ToolbarSpacer />
+			</Toolbar>
+		</customHeader>
+		<content>
+			<core:Fragment fragmentName="sap.ui.demo.basicTemplate.view.details" type="XML"/>
+		</content>
+	</Page>
+</mvc:View>

@@ -55,6 +55,10 @@
 				"settings": {
 					"bundleName": "sap.ui.demo.basicTemplate.i18n.i18n"
 				}
+			},
+			"mockdata":{
+				"type":"sap.ui.model.json.JSONModel",
+				"uri":"model/mockdata.json"
 			}
 		},
 		"resources": {
@@ -76,6 +80,11 @@
 					"pattern": "",
 					"name": "home",
 					"target": ["home"]
+				},
+				{
+					"pattern": "Details/{id}",
+					"name": "detailRoute",
+					"target": ["detailTarget"]
 				}
 			],
 			"targets": {
@@ -84,6 +93,10 @@
 					"viewId": "home",
 					"viewLevel": 1,
 					"title": "{i18n>title}"
+				},
+				"detailTarget": {
+					"viewName": "CustomerDetails",
+					"viewLevel": 1
 				}
 			}
 		}
